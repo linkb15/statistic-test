@@ -1,4 +1,6 @@
 [build]
-  command = "pnpm build"
+  command = "npm build"
   publish = "build/"
   functions = "functions/"
+[build.environment]
+    NPM_FLAGS="--prefix=/"
