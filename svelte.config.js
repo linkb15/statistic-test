@@ -1,6 +1,7 @@
 import preprocess from 'svelte-preprocess';
 
-const netlify = require('@sveltejs/adapter-netlify');
+import netlify from '@sveltejs/adapter-netlify';
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
@@ -12,16 +13,8 @@ const config = {
 		target: '#svelte',
 		adapter: netlify(),
 		vite: {
-			resolve: {
-				dedupe: ['svelte', 'urql']
-			},
 			optimizeDeps: {
-				exclude: Object.keys(pkg.dependencies || {}).filter((d) => !['graphql'].includes(d)),
-				include: ['graphql']
-			},
-			ssr: {
-				// Until https://github.com/vitejs/vite/issues/2579
-				noExternal: Object.keys(pkg.dependencies || {})
+				exclude: ['@urql/svelte']
 			}
 		}
 	}

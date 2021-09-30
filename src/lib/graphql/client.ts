@@ -1,7 +1,7 @@
 import { createClient } from '@urql/svelte';
 
 const client = createClient({
-	url: 'http://localhost:3000/graphql'
+	url: 'https://api.spacex.land/graphql/'
 });
 
 export default client;
