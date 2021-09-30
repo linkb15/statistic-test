@@ -51,6 +51,7 @@
 {/if}
 
 <Chart {data} type="line" />
+<Chart {data} type="pie" />
 
 <div class="overflow-x-auto">
 	<table class="table w-full">
