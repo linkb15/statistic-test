@@ -1,6 +1,6 @@
 <script>
 	import '../app.css';
-	let drawerOpen = true;
+	let drawerOpen = false;
 
 	const closeDrawer = () => {
 		drawerOpen = false;
